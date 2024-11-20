@@ -9,7 +9,7 @@ from . import __version__
 from .rptree import DirectoryTree
 
 
-def parse_cmd_line_arguments():
+def parse_cmd_line_arguments() -> NameSpace:
     parser = argparse.ArgumentParser(
         prog="tree",
         description="RP Tree, a directory tree generator",

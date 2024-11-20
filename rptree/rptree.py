@@ -40,7 +40,9 @@ class _TreeGenerator:
                 self._add_file(entry, prefix, connector)
                 
     def _add_directory(
-        self, directory:pathlib.Path, index:int, entries_count:int, prefix:str, connector:str
+        self, directory:pathlib.Path, index:int, 
+        entries_count:int, prefix:str, 
+        connector:str
     ):
         #self._tree.append(f"{prefix}{connector} {directory.name}{os.sep}")
         self._tree.append(f"{prefix}{connector} {pathlib.Path(directory.name) / ''}")
