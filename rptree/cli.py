@@ -2,14 +2,16 @@
 
 
 import argparse
+from argparse import Namespace
+
 import pathlib
 import sys
 
-from . import __version__
+from .__init__ import __version__
 from .rptree import DirectoryTree
 
 
-def parse_cmd_line_arguments() -> NameSpace:
+def parse_cmd_line_arguments() -> Namespace:
     parser = argparse.ArgumentParser(
         prog="tree",
         description="RP Tree, a directory tree generator",

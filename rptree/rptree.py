@@ -1,8 +1,6 @@
-# rptree.py
 
 """This module provides RP Tree main module."""
 
-#import os
 import pathlib
 
 PIPE = "│"
@@ -22,7 +20,6 @@ class _TreeGenerator:
         return self._tree
 
     def _tree_head(self):
-        #self._tree.append(f"{self._root_dir}{os.sep}")
         self._tree.append(pathlib.Path(self._root_dir) / "")
         self._tree.append(PIPE)
     
@@ -44,7 +41,6 @@ class _TreeGenerator:
         entries_count:int, prefix:str, 
         connector:str
     ):
-        #self._tree.append(f"{prefix}{connector} {directory.name}{os.sep}")
         self._tree.append(f"{prefix}{connector} {pathlib.Path(directory.name) / ''}")
 
         if index != entries_count - 1:
